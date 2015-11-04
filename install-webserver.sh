@@ -10,10 +10,12 @@ mv ./itmo-544-2015fall/index.html /var/www/html
 mv ./itmo-544-2015fall/page2.html /var/www/html
 mv ./itmo-544-2015fall/*.php /var/www/html
 
-curl -sS https://getcomposer.org/installer | php
+curl -sS https://getcomposer.org/installer | sudo php &> /tmp/getcomposer.txt
 
-php composer.phar require aws/aws-sdk-php
+sudo php composer.phar require aws/aws-sdk-php &> /tmp/runcomposer.txt
 
-mv vendor /var/www/html
+sudo mv vendor /var/www/html &> /tmp/movecomposer.txt
+
+sudo php /var/www/html/setup.php &> /tmp/database-setup.txt
 
 echo "Hello!" > /tmp/hello.txt
