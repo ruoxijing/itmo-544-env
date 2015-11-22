@@ -8,7 +8,6 @@ git clone https://github.com/ruoxijing/itmo-544-2015fall.git
 mv ./itmo-544-2015fall/images /var/www/html/images
 mv ./itmo-544-2015fall/*.html /var/www/html
 mv ./itmo-544-2015fall/*.php /var/www/html
-mv ./itmo-544-launch/setup.php /var/www/html
 
 curl -sS https://getcomposer.org/installer | sudo php &> /tmp/getcomposer.txt
 
